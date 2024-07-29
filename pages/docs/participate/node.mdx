@@ -1,0 +1,105 @@
+# Running a Full Node
+
+Running a full node and keeping Cyberyen Core updated are critical for maintaining the integrity and security of the Cyberyen network. This documentation provides comprehensive details on what a full node is, its significance, and the process of setting up a full node on various operating systems. Additionally, it outlines the steps for upgrading Cyberyen Core to ensure optimal performance and compatibility.
+
+### What is a Full Node?
+
+A full node is a program that performs complete validation of transactions and blocks within the Cyberyen network. Full nodes are responsible for:
+
+* **Validation**: Ensuring that all transactions and blocks adhere to the consensus rules of the network.
+* **Relay**: Sharing validated transactions and blocks with other full nodes.
+* **Support**: Assisting lightweight clients by transmitting their transactions to the network and notifying them of any activity affecting their wallet.
+
+Without sufficient full nodes, the network's peer-to-peer functionality would be compromised, forcing clients to rely on centralized services.
+
+### Importance of Running a Full Node
+
+#### Network Integrity
+
+Full nodes ensure that all transactions and blocks comply with the network's consensus rules, preventing fraudulent activity and maintaining the blockchain's integrity.
+
+#### Decentralization
+
+By running a full node, users contribute to the network's decentralization. A decentralized network is more secure, resilient, and resistant to censorship.
+
+#### Support for Lightweight Clients
+
+Full nodes enable lightweight clients to function efficiently by transmitting their transactions and providing updates on their wallet activity. This ensures that all users, regardless of their computing power, can participate in the network.
+
+#### Network Growth
+
+The growth and robustness of the Cyberyen network depend on volunteers running full nodes. More full nodes result in a stronger, more resilient network.
+
+### Minimum Requirements
+
+To run a full node, your system must meet the following minimum requirements:
+
+* **Operating System**: Linux, Windows, or macOS
+* **Processor**: A modern multi-core processor
+* **Memory**: At least 2 GB of RAM
+* **Disk Space**: A minimum of 40 GB of free disk space for storing the blockchain
+* **Network**: High-speed internet connection with at least 500 KB/s upload speed
+* **Uptime**: Ideally, the node should be online 24/7
+
+### Instructions for Setting Up a Full Node
+
+#### Linux
+
+##### Terminal
+
+1. **Building guide**: Visit [Unix build notes](https://github.com/cyberyen/cyberyen/blob/master/doc/build-unix.md) for instructions on building the various elements of the Cyberyen Core.
+2. **Install Dependencies**:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y build-essential
+   sudo apt-get install -y git autoconf libtool pkg-config libboost-all-dev libssl-dev libprotobuf-dev protobuf-compiler libevent-dev libcanberra-gtk-module libdb++-dev libfmt-dev
+   ```
+3. **Download and Install Cyberyen**:
+   ```bash
+   git clone https://github.com/cyberyen/cyberyen.git
+   cd cyberyen
+   sudo ./autogen.sh
+   ./configure
+   make
+   sudo make install
+   ```
+4. **Run the Full Node**:
+   ```bash
+   cyberyend -daemon
+   ```
+5. **Monitor the Node**:
+   ```bash
+   tail -f ~/.cyberyen/debug.log
+   ```
+
+##### GUI
+
+1. **Download the GUI Installer**: Visit [cyberyen.org](https://cyberyen.org) and download the latest Linux GUI version.
+2. **Install the GUI**:
+   Unpack the files into a directory and run:
+   * `bin/cyberyen-qt` (GUI) or
+   * `bin/cyberyend` (headless)
+
+3. **Launch the GUI**: Find Cyberyen in your applications menu and launch it.
+
+#### Windows
+
+1. **Download the Installer**: Visit [cyberyen.org](https://cyberyen.org) and download the latest Windows installer.
+2. **Run the Installer**: Double-click the downloaded file and follow the on-screen instructions.
+3. **Launch the Full Node**: After installation, find Cyberyen in your start menu and launch it.
+4. **Monitor the Node**: Use the debug window within the application to monitor node activity.
+
+#### macOS
+
+1. **Download the Installer**: Visit [cyberyen.org](https://cyberyen.org) and download the latest macOS installer.
+2. **Install the Application**: Open the downloaded .dmg file and drag the Cyberyen application to your Applications folder.
+3. **Run the Full Node**: Open the Cyberyen application from your Applications folder.
+4. **Monitor the Node**: Use the console within the application to monitor node activity.
+
+### Seeking Help
+
+If you encounter any issues or have questions during the setup process, please seek assistance in one of Cyberyen's [communities](/community). These platforms are excellent resources for troubleshooting and obtaining support from other Cyberyen users and developers.
+
+##
+
+Running a full node is a necessary practice for the health and security of the Cyberyen network. By validating transactions and blocks, relaying information, and supporting lightweight clients, full nodes uphold the network's integrity and decentralization. Users with spare computing and bandwidth resources are encouraged to run full nodes to ensure the continued growth and resilience of Cyberyen.

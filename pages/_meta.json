@@ -1,0 +1,44 @@
+{
+  "index": {
+    "type": "page",
+    "title": "Cyberyen",
+    "display": "hidden",
+    "theme": {
+	"layout": "raw"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "Documentation"
+  },
+  "faq": {
+    "type": "page",
+    "title": "FAQ",
+    "theme": {
+	"typesetting": "article"
+    }
+  },
+  "about": {
+    "type": "page",
+    "title": "About",
+    "display": "hidden",
+    "theme": {
+	"typesetting": "article"
+    }
+  },
+  "community": {
+    "type": "page",
+    "title": "Community",
+    "display": "hidden",
+    "theme": {
+	"typesetting": "article"
+    }
+  },
+  "404": {
+    "type": "page",
+    "theme": {
+	"timestamp": false,
+	"typesetting": "article"
+    }
+  }
+}

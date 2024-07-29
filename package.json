@@ -1,0 +1,37 @@
+{
+   "name": "cyberyen.org",
+   "version": "0.0.1",
+   "private": true,
+   "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/cyberyen-org/cyberyen.org.git"
+   },
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/cyberyen-org/cyberyen.org/issues"
+   },
+   "homepage": "https://github.com/cyberyen-org/cyberyen.org#readme",
+   "dependencies": {
+      "next": "^14.2.5",
+      "nextra": "^2.13.4",
+      "nextra-theme-docs": "^2.13.4",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1"
+   },
+   "devDependencies": {
+      "@svgr/webpack": "^8.1.0",
+      "@types/node": "^20.14.11",
+      "@types/react": "^18.3.3",
+      "autoprefixer": "^10.4.19",
+      "clsx": "^2.1.1",
+      "framer-motion": "^11.3.7",
+      "postcss": "^8.4.39",
+      "tailwindcss": "^3.4.6",
+      "typescript": "^5.5.3"
+   }
+}

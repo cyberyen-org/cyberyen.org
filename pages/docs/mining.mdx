@@ -1,0 +1,48 @@
+# Mining Process
+
+Mining is a distributed consensus system used to confirm pending transactions by including them in the blockchain. It enforces a chronological order in the blockchain, protects the neutrality of the network, and allows different computers to agree on the state of the system. To be confirmed, transactions must be packed in a block that fits very strict cryptographic rules that will be verified by the network. These rules prevent previous blocks from being modified because doing so would invalidate all the subsequent blocks. Mining also creates the equivalent of a competitive lottery that prevents any individual from easily adding new blocks consecutively to the blockchain. In this way, no group or individual can control what is included in the blockchain or replace parts of the blockchain to roll back their own spends.
+
+### Role of Miners
+
+Miners are vital to the Cyberyen network, performing essential tasks that ensure the security and integrity of the blockchain. Their primary responsibilities include:
+
+* **Validating Transactions**: Miners verify pending transactions, ensuring they adhere to network rules before including them in the blockchain.
+* **Adding Blocks to the Blockchain**: By solving complex cryptographic puzzles, miners create new blocks, which are then appended to the blockchain.
+* **Maintaining Consensus**: Through their work, miners help maintain the network's decentralized consensus, preventing any single entity from gaining control over the blockchain.
+
+### Proof of Work Algorithm
+
+Cyberyen uses a proof of work (PoW) algorithm that uses a simplified variant of the Scrypt key derivation function. Key features of this algorithm include:
+
+* **Target Block Time**: The PoW algorithm targets a block generation time of one minute.
+* **Difficulty Adjustment**: The network adjusts the mining difficulty after each block to maintain this target block time. This dynamic adjustment ensures that blocks are consistently added to the blockchain, preserving network stability.
+
+#### Cryptographic Puzzle
+
+To add a block to the blockchain, miners must solve a cryptographic puzzle that requires significant computational effort. This puzzle is based on the Scrypt algorithm, which demands memory-intensive operations, enhancing security by making it costly and resource-intensive to perform attacks.
+
+### Block Rewards
+
+Cyberyen features a structured block reward system designed to incentivize miners while managing the currency's inflation. The rewards decrease over time according to a predefined schedule:
+
+* **Blocks 1–99,000**: Up to 1,000,000 cyberyens per block.
+* **Blocks 99,001–99,999**: Up to 500,000 cyberyens per block.
+* **Blocks 100,000–199,999**: 250,000 cyberyens per block.
+* **Blocks 200,000–299,999**: 125,000 cyberyens per block.
+* **Blocks 300,000–399,999**: 62,500 cyberyens per block.
+* **Blocks 400,000–499,999**: 31,250 cyberyens per block.
+* **Blocks 500,000–599,999**: 15,625 cyberyens per block.
+* **Blocks 600,000 and beyond**: 10,000 cyberyens per block.
+
+This reward reduction mechanism, known as halving, helps control the supply of new cyberyens and provides a balanced incentive structure for miners over the long term.
+
+### Continuous Issuance
+
+Cyberyen's protocol supports the continuous issuance of new coins, with no upper limit on the total supply. This design ensures a steady introduction of cyberyens into the network:
+
+* **Steady Supply**: New cyberyens are introduced with each new block, maintaining a predictable increase in the coin supply.
+* **Economic Impact**: The continuous issuance model aims to balance network growth with inflation control, supporting the currency's long-term viability.
+
+##
+
+Cyberyen's mining process is integral to its decentralized architecture, ensuring security, transaction validation, and consensus maintenance. The structured block reward system and continuous issuance model provide a balanced approach to incentivizing miners while managing currency inflation. Understanding these mechanisms is crucial for anyone participating in or studying the Cyberyen network.

@@ -1,0 +1,32 @@
+{
+    "index": "Introduction",
+    "blockchain": "Blockchain",
+    "mining": "Mining Process",
+    "scrypt": "Scrypt Algorithm",
+    "mweb": "MWEB",
+    "---": {
+    "type": "separator"
+    },
+    "participate": "Participate",
+    "-- More": {
+	"type": "separator",
+	"title": "More"
+    },
+    "faq-link": {
+	"title": "FAQ",
+	"href": "/faq"
+    },
+    "about-link": {
+	"title": "About",
+	"href": "/about"
+    },
+    "community-link": {
+	"title": "Community",
+	"href": "/community"
+    },
+    "matrix-link": {
+	"title": "#cyberyen.org ↗",
+	"href": "https://matrix.to/#/#cyberyen.org:matrix.org",
+	"newWindow": true
+    }
+}

@@ -1,0 +1,34 @@
+# MiMblewimble Protocol
+
+The MimbleWimble Protocol is a decentralized privacy-oriented system employing a novel method of structuring and storing transactions on the blockchain. [Originally published](https://scalingbitcoin.org/papers/mimblewimble.txt) in mid-2016 by an unknown developer, MimbleWimble has become a cornerstone for privacy-focused cryptocurrencies, including Cyberyen.
+
+### Cyberyen Integration with MimbleWimble
+
+#### Overview
+
+Cyberyen offers the option to operate under the MimbleWimble protocol, which does not contain addresses or specific transaction details for each user. This section details how Cyberyen integrates MimbleWimble for enhanced privacy.
+
+#### Extension Blocks
+
+To utilize MimbleWimble’s privacy-preserving technology, Cyberyen users can move their cyberyens into “Extension Blocks”. These blocks function as a parallel blockchain to the main Cyberyen chain, existing within each Cyberyen block. Transactions within these blocks conceal the addresses and amounts from everyone except the transaction participants, providing higher privacy than the main blockchain. Users can move their cyberyens out of the Extension Blocks back onto the main chain for transparent transactions.
+
+#### Optional Usage
+
+Using Extension Blocks is entirely optional. The majority of Cyberyen activity remains on the transparent ledger, allowing users to choose their level of privacy based on their needs.
+
+### Transactions in Extension Blocks
+
+#### Pegging-In and Pegging-Out
+
+* **Pegging-In**: Moving funds into an Extension Block requires creating a specific pegging-in transaction or sending to a special MWEB address (prefix cywmeb1). Miners then create the pegging-in transaction on behalf of the user.
+* **Pegging-Out**: To remove funds from an Extension Block, users create a pegging-out transaction by sending funds to a non-privacy-preserving Cyberyen address. Funds are movable after six block confirmations.
+
+#### HogEx Transactions
+
+Pegging-in transactions are processed by a transaction in the same block called the HogEx (Hogwarts Express). HogEx transactions handle the balance transfer within Extension Blocks, consolidating pegging-in and pegging-out transactions to maintain the balance from one block to the next.
+
+##
+
+The MimbleWimble Protocol integration in Cyberyen through MWEB provides users with optional privacy features, enhancing transaction confidentiality and network scalability.
+
+For more detailed technical specifications, refer to [LIP-0003](https://github.com/litecoin-project/lips/blob/master/lip-0003.mediawiki) and [LIP-00004](https://github.com/litecoin-project/lips/blob/master/lip-0004.mediawiki) from the developers of Litecoin, where the MimbleWimble protocol was originally integrated.

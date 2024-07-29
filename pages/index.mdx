@@ -1,0 +1,135 @@
+---
+title: Cyberyen – Open source p2p currency protocol
+---
+
+import { Feature, Features } from '@components/features'
+import { ArrowRightIcon } from '@components/icons'
+import cn from 'clsx'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
+import styles from './index.module.css'
+
+export function File({ name, className, ...props }) {
+  return (
+    <span className={cn(styles.file, className)} {...props}>
+      {name}
+    </span>
+  )
+}
+
+export function Comparison({ a, b, invert, ...props }) {
+  return (
+    <div className={cn(styles.comparison, invert && styles.invert)} {...props}>
+      <div>{a}</div>
+      <ArrowRightIcon width="1.2em" />
+      <div>{b}</div>
+    </div>
+  )
+}
+
+<div className="home-content">
+  <div className="content-container" style={{
+    backgroundImage: 'url(assets/c.png)',
+    backgroundPosition: 'bottom',
+    backgroundRepeat: 'no-repeat',
+  }}>
+    <h1 className="headline">PRIVATE AND SECURE <br className='sm:block hidden'/>PEER-TO-PEER DECENTRALIZED <br className='sm:block hidden'/>DIGITAL CURRENCY</h1>
+    <p className="subtitle">Cyberyen [C¥] is an alternative payment network<br className='sm:block hidden'/>based on Blockchain Technology</p>
+    <p className="subtitle">
+      <a className="nextjs-link" href="https://github.com/cyberyen/cyberyen/" target="_blank">Contribute →</a>
+    </p>
+  </div>
+  <style jsx>{`
+    .content-container {
+      max-width: 90rem;
+      padding-left: max(env(safe-area-inset-left),1.5rem);
+      padding-right: max(env(safe-area-inset-right),1.5rem);
+      margin: 0 auto;
+    }
+    .features-container {
+      margin: 8rem 0 0;
+      padding: 4rem 0;
+      background-color: #f3f4f6;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .features-container .content-container {
+      margin-top: -8rem;
+    }
+    :global(.dark) .features-container {
+      background-color: #000;
+      border-bottom: 1px solid rgb(38,38,38);
+    }
+    .headline {
+      display: inline-flex;
+      font-family: Pixeloperatormono, sans-serif;
+      font-size: 3.125rem;
+      font-size: min(8.375rem, max(8vw, 2.5rem));
+      font-weight: 900;
+      font-feature-settings: initial;
+      letter-spacing: -.12rem;
+      margin-left: -0.2rem;
+      margin-top: 3.4rem;
+      line-height: 1.1;
+      background-image: linear-gradient(146deg,#000,#3C3C3C);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    :global(.dark) .headline {
+      background-image: linear-gradient(146deg,#fff,#3C3C3C);
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      font-size: min(1.3rem, max(3.5vw, 1.2rem));
+      font-feature-settings: initial;
+      line-height: 1.6;
+    }
+    .nextjs-link {
+      color: currentColor;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  `}</style>
+
+  <div className="features-container">
+    <div className="content-container">
+      <Features>
+	<Feature index={0} large href="/docs">
+	  <h3>What is Cyberyen</h3>
+	  <p>Cyberyen is a peer-to-peer cryptocurrency protocol enabling instant transactions without reliance on any central authorities. Utilizing blockchain technology powered by cryptography, Cyberyen maintains a secure, decentralized ledger distributed across a network of nodes. Its collectively managed, open-source, public design ensures transparency and inclusivity.</p>
+	</Feature>
+	<Feature index={1} centered className="card-with-border">
+	  <div className="h-full flex flex-col justify-between">
+	    <h3>Cyberyen Core</h3>
+	    <p className='text-left mb-8 text-center'>Open source desktop node and wallet.</p>
+	    <p className="subtitle">
+	      <Link className={styles.cta} href="https://github.com/cyberyen/cyberyen/releases/tag/v0.21.2.5">Download <span>0.21.2.5</span></Link>
+	    </p>
+	  </div>
+	</Feature>
+	<Feature index={2}>
+	  <h3>Transparent code <br/>open to contributors</h3>
+	  <p className='mr-6'>Cyberyen is an open source software project released under the MIT/X11 license which gives you the power to run, modify, and copy the software and to distribute, at your option, modified copies of the software. The software is released in a transparent process that allows for independent verification of binaries and their corresponding source code.</p>
+	</Feature>
+	<Feature index={3} href="/docs/blockchain">
+	  <h3>Block <br/>generation</h3>
+	  <p className='mr-6'>Cyberyen employs a simplified variant of the scrypt key derivation function for its proof of work mechanism. It targets a block generation time of one minute, with difficulty readjustment occurring after each block.</p>
+	</Feature>
+	<Feature index={4} href="/docs/mining">
+	  <h3>Network support <br/>principle</h3>
+	  <p className='mr-6'>Cyberyen uses a fixed block reward system, where miners receive 10,000 cyberyens per block. This system is crucial for network security and maintaining the consensus mechanism. The protocol supports continuous issuance of cyberyens, with no upper limit on the total supply.</p>
+	</Feature>
+	<Feature index={5} href="/docs/mweb">
+	  <h3>MWEB <br/>confidential transactions</h3>
+	  <p className='mr-6'>The MimbleWimble Extension Block (MWEB) facilitates confidential transactions within Cyberyen. It enables users to perform transactions where the amounts are known solely to the sender and receiver. Additionally, MWEB enhances privacy by concealing address balances and improves transaction throughput.</p>
+	</Feature>
+	<Feature index={6} large>
+	  <h3>[C¥] Wallets</h3>
+	  <p>Cyberyen Core serves as a comprehensive client and integral component of the Cyberyen network, providing robust security, privacy, and stability. Built on the open-source Cyberyen Core framework, it enables developers to create encrypted wallets that are synchronized with the Cyberyen blockchain for secure transactions and account management.</p>
+	  <p className="subtitle"><Link className="!no-underline" href="https://github.com/cyberyen/cyberyen/" target="_blank">Source Code →</Link></p>
+	</Feature>
+      </Features>
+    </div>
+  </div>
+</div>

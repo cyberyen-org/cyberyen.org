@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Pixeloperatormono';
+    src: url('https://cdn.shopify.com/s/files/1/2642/6578/files/PPNeueBit-Bold.woff') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --white: #FFF;
+    --primary: #b1b1b1;
+    --secondary: #e9e9e9;
+    --gray: #3C3C3C;
+}
+
+body {
+    font-feature-settings:
+	'rlig' 1,
+	'calt' 1;
+}
+
+.home-content p {
+  margin-top: 1.5em;
+  line-height: 1.75em;
+}
+
+.home-content a {
+  --tw-ring-color: hsl(
+    var(--nextra-primary-hue) var(--nextra-primary-saturation) 50%/0.3
+  );
+  --tw-text-opacity: 1;
+  text-underline-position: under;
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+  color: hsl(
+    var(--nextra-primary-hue) var(--nextra-primary-saturation) 50% /
+      var(--tw-text-opacity)
+  );
+}
+
+code.text-\[\.9em\] {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  .home-content .hide-medium {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .home-content p {
+    font-size: 0.9rem;
+  }
+  .home-content .hide-small {
+    display: none;
+  }
+}
