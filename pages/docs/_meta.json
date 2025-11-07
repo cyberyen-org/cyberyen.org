@@ -1,8 +1,8 @@
 {
     "index": "Introduction",
     "blockchain": "Blockchain",
-    "mining": "Mining Process",
     "scrypt": "Scrypt Algorithm",
+    "mining": "Mining Process",
     "mweb": "MWEB",
     "---": {
     "type": "separator"

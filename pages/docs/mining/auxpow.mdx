@@ -1,0 +1,30 @@
+# AuxPoW
+
+Auxiliary Proof-of-Work (AuxPoW) is a merged mining protocol that enables a blockchain to leverage the computational work performed on a parent chain, such as Litecoin, to secure its own network. Originally pioneered by Namecoin in 2011, AuxPoW allows miners to validate blocks on multiple chains simultaneously using the same proof-of-work effort, enhancing security for smaller networks without requiring dedicated hashing power.
+
+### Cyberyen Integration with AuxPoW
+
+#### Overview
+
+Cyberyen has integrated AuxPoW to bolster network security through merged mining. This allows Cyberyen miners to contribute to both chains concurrently, inheriting Litecoin's hashing power to deter attacks and ensure robust consensus. The feature activates at block height 1,265,000, implemented in release 0.21.5 via commit [c4a62a5](https://github.com/cyberyen/cyberyen/commit/c4a62a5f8600de39659d394721d6aa2ab6c0b8b2).
+
+#### Merged Mining Process
+
+In Cyberyen's AuxPoW setup, miners embed the hash of a Cyberyen block header into the coinbase transaction of a Litecoin block before mining. Once the Litecoin block is solved, the auxiliary proof—including the parent block header, coinbase transaction, and Merkle branches—is attached to the Cyberyen block. This "AuxPoW block" is then validated on the Cyberyen chain, confirming that sufficient work was performed on the parent chain to meet Cyberyen's difficulty target.
+
+Key validation steps include:
+- Verifying the parent block's chain ID to prevent cross-chain reuse.
+- Checking Merkle branches for the Cyberyen block hash in the parent's coinbase and the overall tree.
+- Parsing the coinbase script for the merged mining header and ensuring a single, properly positioned instance.
+
+Blocks prior to height 1,265,000 use standard proof-of-work (PoW); post-activation, nodes accept both solo-mined and AuxPoW blocks for backward compatibility.
+
+#### Benefits for Cyberyen
+
+AuxPoW integration provides optional merged mining, allowing users and miners to choose based on their setup. The majority of Cyberyen mining can continue independently, while merged miners gain dual rewards, increasing overall network hash rate and resilience against 51% attacks.
+
+##
+
+The AuxPoW integration in Cyberyen at block height 1,265,000 enables efficient merged mining with Litecoin, enhancing security and miner incentives while preserving compatibility with solo mining.
+
+For more detailed technical specifications, refer to the original [Namecoin merged mining implementation](https://en.bitcoin.it/wiki/Merged_mining_specification) and the Cyberyen commit [c4a62a5](https://github.com/cyberyen/cyberyen/commit/c4a62a5f8600de39659d394721d6aa2ab6c0b8b2).
